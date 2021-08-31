@@ -1,0 +1,12 @@
+
+<app-book-slot [choosenSport] = "sportName" [show] = "showDateForm"></app-book-slot>
+
+<app-book-time [choosenSport] = "sportName" [disabledTime] = "disabledTime"></app-book-time>
+
+<app-buy-form [choosenSport] = "sportName"></app-buy-form>
+
+<div *ngFor = "let slot of slots">
+    book-slots - {{slot.time}}
+</div>
+
+

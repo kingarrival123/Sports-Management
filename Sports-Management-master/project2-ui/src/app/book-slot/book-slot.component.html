@@ -1,0 +1,26 @@
+
+<div *ngIf = "show" class="main-container">
+    <p>{{choosenSport}}</p>
+    <div class="container">
+        <div class="date-container">
+            <p>{{monthList[nowMonth]}}</p>
+            <ul>
+                <li *ngFor="let myDate of dateList; let idx1 = index">
+                    <a (click)="idx1+1 > nowDate ? onDateClick(myDate) : ''" [ngClass] = "[idx1 < nowDate ? 'color-class' : 'normal-color-class']">{{myDate | date:'dd'}}</a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="date-container" *ngIf = "nextMonth">
+            <p>{{monthList[nowMonth+1]}}</p>
+            <ul>
+                <li *ngFor="let nextDate of nextDateList; let idx2 = index">
+                    <a (click)="idx2-1 < nowDate ? onDateClick(nextDate) : ''" [ngClass] = "[idx2 > nowDate ? 'color-class' : 'normal-color-class']">{{nextDate | date:'dd'}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+</div>
+
+

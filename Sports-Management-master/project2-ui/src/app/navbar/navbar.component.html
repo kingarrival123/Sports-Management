@@ -1,0 +1,23 @@
+
+<ul class="nav">
+    <li>
+        <a href="#">Home</a>
+    </li>
+    <li class="parent" (click)="dropClick()">
+        <a>Book</a>
+        <ul class="drop-down" [ngClass] = "showDropDown == true ? 'show' : 'hide'">
+            <li>
+                <a (click)="openDateForm('Cricket')" routerLink="/book">Cricket</a>
+            </li>
+            <li>
+                <a (click)="openDateForm('Volleyball')" routerLink="/book">Volleyball</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a routerLink="/my-slots">My-slots</a>
+    </li>
+    <li>
+        <a href="#">Log-out</a>
+    </li>
+</ul>

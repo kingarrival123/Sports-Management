@@ -1,0 +1,8 @@
+<p>{{choosenSport}}</p>
+<div class="container" *ngIf="showTimeForm">
+    <ul>
+        <li *ngFor="let timePeriod of timeArray; let idx = index" [ngClass]="disabledTime.includes(timePeriod) ? 'disable' : 'enable'" (click)="disabledTime.includes(timePeriod) ? '' : clickTime(timePeriod)">
+            <p>{{timePeriod}}</p>
+        </li>
+    </ul>
+</div>

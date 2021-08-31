@@ -1,0 +1,51 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 450px;
+    background-color: tomato;
+    margin: 20px;
+}
+
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: space-around;
+    height: 400px;
+    width: 600px;
+    background-color: white;
+    padding: 10px;
+}
+
+li{
+    list-style-type: none;
+    text-decoration: none;
+    width: 23%;
+    text-align: center;
+    cursor: pointer;
+    margin: 5px;
+}
+.enable{
+    
+}
+
+.enable:hover{
+    background-color: grey;
+    color: white;
+}
+
+.disable{
+    background-color: salmon;
+    cursor: text; 
+}
+
+
+.back-black{
+    background-color: black;
+}
+.back-white{
+    background-color: white;
+}
+
